@@ -1,0 +1,62 @@
+{
+  "response": [
+    {
+      "name": "01 - BTC",
+      "url": "https://github.com/bitcoin/bitcoin/releases.atom",
+      "owner": "bitcoin",
+      "repo": "bitcoin",
+      "interval": 30
+    },
+    {
+      "name": "02 - LTC",
+      "url": "https://github.com/litecoin-project/litecoin/releases.atom",
+      "owner": "litecoin-project",
+      "repo": "litecoin",
+      "interval": 30
+    },
+    {
+      "name": "03 - DASH",
+      "url": "https://github.com/dashpay/dash/releases.atom",
+      "owner": "dashpay",
+      "repo": "dash",
+      "interval": 30
+    },
+    {
+      "name": "04 - XMR",
+      "url": "https://github.com/dashpay/dash/releases.atom",
+      "owner": "litecoin-project",
+      "repo": "litecoin",
+      "interval": 30
+    },
+    {
+      "name": "05 - ETH",
+      "url": "https://github.com/paritytech/parity-ethereum/releases.atom",
+      "owner": "paritytech",
+      "repo": "parity-ethereum",
+      "interval": 30
+    },
+    {
+      "name": "06 - ZEC",
+      "url": "https://github.com/zcash/zcash/releases.atom",
+      "owner": "zcash",
+      "repo": "zcash",
+      "interval": 30
+    },
+    {
+      "name": "07 - ETN",
+      "url": "https://github.com/electroneum/electroneum/releases.atom",
+      "owner": "electroneum",
+      "repo": "electroneum",
+      "interval": 30
+    },
+    {
+      "name": "08 - DCR",
+      "url": "https://github.com/decred/dcrd/releases.atom",
+      "owner": "decred",
+      "repo": "dcrd",
+      "interval": 30
+    }
+  ],
+  "dingtalk": "",
+  "heartbeat": ""
+}
