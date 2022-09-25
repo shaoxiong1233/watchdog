@@ -1,5 +1,0 @@
-_Store
-.idea/
-node_modules
-# 在这个文件里配置环境变量
-.env
