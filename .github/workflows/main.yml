@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: generate env variable
         run: |
+          echo "registry_us=registry.cn-hangzhou.aliyuncs.com"
           echo "registry_us=registry.cn-hangzhou.aliyuncs.com" >> $GITHUB_ENV
           echo "pool_watchdog_suffix=wsx124/public:${{ env.major_version }}.${{ env.minor_version }}.${{ github.run_number }}" >> $GITHUB_ENV
       - name: Checkout
