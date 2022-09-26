@@ -1,15 +1,15 @@
 var jsonFile = require('jsonfile')
 const OctoKit = require('octokit')
 const fileName = './config/config.json' //配置文件目录
+
 let CronJob = require('cron').CronJob;
-console.log(123)
 
 //待解决，时区，心跳
-
 //启动，重启 slack 通知
 //await require("slack/slackUtils").slackUtils('start/restart');
-new CronJob('*/60 * * * *', async () => {
+new CronJob('*/1 * * * *', async () => {
     let configArray = [];
+    console.log(124)
     let jsonData = await jsonFile.readFile(fileName);
     for (let i = 0; i < jsonData['response'].length; ++i) {
         let coin = jsonData['response'][i].name;
@@ -46,10 +46,12 @@ new CronJob('*/60 * * * *', async () => {
 
     }
 
+
     if (coinArray.length === 0) {
         console.warn("git error");
         //判断如果是api限制，则停止一段时间
     } else {
+        console.log(coinArray)
         let coinInsertArray = []
         let coinUpdateArray = []
         for (const x of coinArray) {

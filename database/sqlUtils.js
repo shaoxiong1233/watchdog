@@ -6,10 +6,10 @@ require('dotenv').config()
 exports.upsertRecord = async (sql, record) => {
     let mysqlConnection = await mysql.createConnection({
         host: process.env.MYSQL_HOST,
-        user: "test",
-        password: '123456',
+        user: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PASSWORD,
         port: process.env.MYSQL_PORT,
-        database: "dog_database"
+        database: process.env.MYSQL_DATABASE
     });
 
     console.log("mysql insert data: ", record);
