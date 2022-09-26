@@ -8,15 +8,13 @@ registry.us-east-1.aliyuncs.com/poolin/hash_slice_http_server:latest --push -f .
 --platform linux/amd64,linux/arm64 -t registry.us-east-1.aliyuncs.com/poolin/hash_slice_cron_server:latest --push -f
     ./cron.Dockerfile .
 
-
---log-opt mode=non-blocking --log-opt max-buffer-size=4m --log-driver journald \
-
 docker run -it --restart always -d \
 --env AWS_REGION=us-east-1 \
---env MYSQL_HOST=127.0.0.1 \
---env MYSQL_PORT=3306 \
---env MYSQL_DATABASE=dog_database \
---env MYSQL_USER=test \
---env MYSQL_PASSWORD=123456 \
---name test \
-test
+--env MYSQL_HOST= \
+--env MYSQL_PORT= \
+--env MYSQL_DATABASE= \
+--env MYSQL_USER= \
+--env MYSQL_PASSWORD= \
+--log-opt mode=non-blocking --log-opt max-buffer-size=4m --log-driver journald \
+--name ${docker_name} \
+${docker_version}
