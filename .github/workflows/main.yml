@@ -1,3 +1,6 @@
+#registry.cn-hangzhou.aliyuncs.com/public:latest
+#账号 wsxwsx124
+#密码 123456wsx
 # 拷贝脚本修改点 1 (一共 4 个): 重命名文件名. 主要把 release.3.0 相关修改为对应分支名, 后续步骤类似
 # 拷贝脚本修改点 2 (一共 4 个)
 name: 'build watch dog'
@@ -64,7 +67,7 @@ jobs:
                                    "elements": [
                                        {
                                            "type": "plain_text",
-                                           "text": "cron: ${{ env.registry_us }}/${{ env.pool_cron_suffix }}"
+                                           "text": "cron: ${{ env.registry_us }}/${{ env.pool_watchdog_suffix }}"
                                        }
                                    ]
                                }
