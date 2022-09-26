@@ -19,7 +19,7 @@ env:
 
 jobs:
   cron-server:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: generate env variable
         run: |
