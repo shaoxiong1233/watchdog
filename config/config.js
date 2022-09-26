@@ -1,9 +1,7 @@
 var jsonFile = require('jsonfile')
 const OctoKit = require('octokit')
 const fileName = './config.json' //配置文件目录
-const schedule = require('node-schedule');
-let rule = new schedule.RecurrenceRule();
-rule.second = 0;//每分钟执行一下
+
 
 
 jsonFile.readFile(fileName, async function (err, jsonData) {
