@@ -2,7 +2,7 @@ var jsonFile = require('jsonfile')
 const OctoKit = require('octokit')
 const fileName = './config/config.json' //配置文件目录
 let CronJob = require('cron').CronJob;
-
+console.log(123)
 
 //待解决，时区，心跳
 
