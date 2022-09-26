@@ -1,11 +1,8 @@
 var jsonFile = require('jsonfile')
 const OctoKit = require('octokit')
 const fileName = './config/config.json' //配置文件目录
-const schedule = require('node-schedule');
 let CronJob = require('cron').CronJob;
 
-let rule = new schedule.RecurrenceRule();
-rule.second = 0;//每分钟执行一下,待修改，过于频繁
 
 //待解决，时区，心跳
 
