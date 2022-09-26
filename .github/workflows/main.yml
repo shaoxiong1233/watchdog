@@ -21,7 +21,7 @@ jobs:
       - name: generate env variable
         run: |
           echo "registry_us=registry.cn-hangzhou.aliyuncs.com" >> $GITHUB_ENV
-          echo "pool_cron_suffix=wsx124/public:${{ env.major_version }}.${{ env.minor_version }}.${{ github.run_number }}" >> $GITHUB_ENV
+          echo "pool_watchdog_suffix=wsx124/public:${{ env.major_version }}.${{ env.minor_version }}.${{ github.run_number }}" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set up QEMU
@@ -42,7 +42,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.registry_us }}/${{ env.pool_cron_suffix }}
+            ${{ env.registry_us }}/${{ env.pool_watchdog_suffix }}
       - name: Slack notification
         uses: tiloio/slack-webhook-action@v1.0.1
         with:
@@ -66,15 +66,7 @@ jobs:
                                            "text": "cron: ${{ env.registry_us }}/${{ env.pool_cron_suffix }}"
                                        }
                                    ]
-                               },
-                               {
-                                   "type": "context",
-                                   "elements": [
-                                       {
-                                           "type": "plain_text",
-                                           "text": "http: ${{ env.registry_us }}/${{ env.pool_http_suffix }}"
-                                       }
-                                   ]
                                }
+ 
                            ]
                        }'
